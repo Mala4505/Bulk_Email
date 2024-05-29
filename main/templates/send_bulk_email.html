@@ -1,0 +1,22 @@
+<!-- email_app/templates/send_bulk_email.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulk Email Form</title>
+</head>
+<body>
+    <h2>Bulk Email Form</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_recipients">Recipients (separated by comma):</label><br>
+        <textarea id="id_recipients" name="recipients" rows="4" cols="50"></textarea><br><br>
+        <label for="id_subject">Subject:</label><br>
+        <input type="text" id="id_subject" name="subject"><br><br>
+        <label for="id_body">Body:</label><br>
+        <textarea id="id_body" name="body" rows="8" cols="50"></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
